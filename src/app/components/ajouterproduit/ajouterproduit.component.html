@@ -1,0 +1,47 @@
+<app-header-user></app-header-user>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6" style="width: 70%;">
+      <div class="card my-4">
+        <div class="card-header">
+           <h2 class="card-title" style="text-align: center;">Ajouter un Produit</h2>
+           </div>
+            <img src="../../../assets/twila.jpg" alt="amine" width="900px" height="400px">
+            <div class="card-body"> <form #addForm="ngForm" (ngSubmit)="onAddProduit(addForm)">
+              <div class="mb-3"> <label for="title" class="form-label">Titre du Produit :</label>
+                <input type="text" ngModel id="title" name="titre" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                 <label for="description" class="form-label">Description :</label>
+                 <textarea id="description" ngModel name="description" class="form-control" rows="4" required></textarea>
+                 </div>
+                 <div class="mb-3">
+                  <label for="photo" class="form-label">URL de la Photo :</label>
+                   <input type="file" id="photo" ngModel name="photo" class="form-control" required>
+                   </div>
+                   <div class="mb-3"> <label for="category" class="form-label">Catégorie :</label>
+                     <select id="category" ngModel name="nomcateg" class="form-select">
+                      <option value="voitures">Voitures</option>
+                      <option value="electronic">electronic</option>
+                       <option value="materiel">Matériel</option>
+                      </select>
+                    </div>
+                     <div class="mb-3">
+                      <label for="prix" class="form-label">Prix du Produit :</label>
+                      <input type="text" ngModel id="prix" name="prix" class="form-control" required>
+                     </div>
+                     <div class="mb-3">
+                       <label for="phoneprod" class="form-label">Numéro de Téléphone :</label>
+                        <input type="tel" id="phoneprod" name="phoneprod" ngModel class="form-control" required>
+                       </div>
+                       <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Ajouter</button>
+                      </div>
+                    </form>
+                   </div>
+                   </div>
+                  </div>
+                </div>
+              </div>
+<app-footer-user></app-footer-user>

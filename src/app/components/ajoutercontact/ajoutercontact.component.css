@@ -1,0 +1,91 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.navbar__menu {
+  position: relative;
+  display: flex;
+}
+
+.navbar__link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: center;
+  height: var(--linkHeight);
+  width: var(--linkWidth);
+  color: var(--text);
+  transition: var(--transition);
+  text-decoration: none;
+  width: var(--linkWidth);
+  text-transform: uppercase;
+  transition: 500ms ease all;
+}
+
+.navbar__link svg {
+  transition: 500ms ease all;
+}
+
+.navbar__link:hover svg {
+  stroke: var(--primary);
+}
+
+.navbar:not(:hover) .navbar__link:focus,
+.navbar__link:hover {
+  span {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.navbar__item:last-child:before {
+  content: '';
+  position: absolute;
+  left: -8rem;
+  margin-left: calc(var(--linkWidth) / 2);
+  bottom: -1.25rem;
+  height: 0.5rem;
+  width: 2px;
+  background: var(--primary);
+  --speedlineColor: rgba(255, 255, 255, 0.2);
+  --speedGap: 3rem;
+  --shadow: 0 -0.5rem var(--primary), 0 -0.5rem var(--primary), 0 var(--speedGap) 0.5rem var(--primary), 2rem 0 0 var(--speedlineColor), calc(-1 * var(--speedGap)) 0 0 var(--speedlineColor);
+}
+
+/* Ajoutez ces styles pour personnaliser les liens */
+.navbar__link.home-link {
+  color: #fff; /* Couleur du texte pour Accueil */
+}
+
+.navbar__link.about-link {
+  color: #fff; /* Couleur du texte pour A propos de nous */
+}
+
+.navbar__link.contact-link {
+  color: #fff; /* Couleur du texte pour Contactez-nous */
+}
+
+.navbar__link.login-link {
+  color: #fff; /* Couleur du texte pour Se connecter */
+}
+
+/* Ajoutez ces styles pour styliser les liens */
+.navbar__link {
+  color: #fff; /* Couleur du texte pour les liens */
+  text-decoration: none; /* Supprimer la décoration de soulignement */
+  padding: 10px 15px; /* Ajouter un peu d'espace autour du texte */
+  transition: color 0.3s ease-in-out; /* Animation de transition de couleur au survol */
+
+  /* Ajoutez d'autres styles selon vos besoins */
+}
+
+.navbar__link:hover {
+  color: #f26522; /* Couleur du texte au survol */
+}

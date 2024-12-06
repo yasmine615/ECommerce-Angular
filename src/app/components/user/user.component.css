@@ -1,0 +1,24 @@
+/* Ajoutez vos styles CSS existants ici */
+
+.colonneRouge {
+  background-color: rgba(190, 145, 145, 0.925);
+  color: white; /* Changer la couleur du texte si nécessaire */
+}
+button {
+  background-color: red;
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Alignement à droite */
+  width: 88.4%; /* Largeur de 80% */
+  margin-left: auto; /* Décalage vers la droite */
+}
+app-header-admin{
+  width: 20%;
+}

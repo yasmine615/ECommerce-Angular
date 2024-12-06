@@ -1,0 +1,29 @@
+
+<div class="header">
+  <div class="header__logo">
+    <img src="../../../assets/yey.jpg" alt="hethy" width="95px" >
+  </div>
+  <nav class="navbar">
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a routerLink="/home" class="navbar__link home-link" style="border-color: #f1bc31;"><i data-feather="home"></i><span>Accueil</span></a>
+      </li>
+      <li class="navbar__item">
+        <a routerLink="/aboutus" class="navbar__link about-link"><i data-feather="info"></i><span>A propos de nous</span></a>
+      </li>
+      <li class="navbar__item">
+        <a routerLink="/ajoutercontact" class="navbar__link contact-link"><i data-feather="mail"></i><span>Contactez-nous</span></a>
+      </li>
+      <li *ngIf="router.url !== '/seconnecter'" class="nav-item">
+        <a routerLink="/seconnecter" class="navbar__link contact-link"><i data-feather="log-in"></i><span>Se connecter</span></a>
+    </li>
+    <li *ngIf="router.url === '/seconnecter'">
+        <a routerLink="/sinscrire" class="navbar__link contact-link"><i data-feather="log-in"></i><span>S'inscrire</span></a>
+    </li>
+    </ul>
+  </nav>
+</div>
+
+
+
+

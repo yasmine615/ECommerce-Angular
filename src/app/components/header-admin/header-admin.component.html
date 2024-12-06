@@ -1,0 +1,28 @@
+<div class="header">
+  <div class="header__logo">
+    <img src="../../../assets/yey.jpg" alt="hethy"  style="width: 95%;">
+  </div>
+  <nav class="navbar">
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a routerLink="/homeadmin" class="navbar__link home-link"><i data-feather="home"></i><span>Accueil</span></a>
+      </li>
+      <br>
+      <br>
+      <li class="navbar__item">
+        <a routerLink="/user" class="navbar__link contact-link"><i data-feather="mail"></i><span>C _utilisateurs</span></a>
+      </li>
+      <br>
+      <br>
+      <li class="navbar__item" *ngIf="router.url !== '/seconnecter'">
+        <a routerLink="/contact" class="navbar__link login-link"><i data-feather="log-in"></i><span>C _messages</span></a>
+      </li>
+      <br>
+      <br>
+      <li class="navbar__item">
+        <a (click)="logOut()" routerLink="" class="navbar__link contact-link"><i data-feather="mail"></i><span>Déconnexion</span></a>
+      </li>
+    </ul>
+  </nav>
+</div>
+

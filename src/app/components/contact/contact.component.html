@@ -1,0 +1,30 @@
+<app-header-admin></app-header-admin><br><br>
+<div class="content-wrapper">
+<div class="container">
+  <table class="table table-bordered">
+      <thead>
+          <tr>
+              <th scope="col">#</th>
+              <th scope="col">Nom</th>
+              <th scope="col">Prénom</th>
+              <th scope="col">Téléphone</th>
+              <th scope="col">Message</th>
+              <th scope="col">Action</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let contact of contacts; let i = index">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ contact.nom }}</td>
+              <td>{{ contact.prenom }}</td>
+              <td>{{ contact.phone }}</td>
+              <td>{{ contact.message }}</td>
+              <td>
+                  <button (click)="supprimerMessage(contact)">Supprimer</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+<app-footer-admin></app-footer-admin>
+</div>

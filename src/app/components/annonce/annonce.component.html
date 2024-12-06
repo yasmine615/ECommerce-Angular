@@ -1,0 +1,104 @@
+<app-header-user></app-header-user><br><br>
+<div class="container">
+    <h2>Mes Annonces</h2>
+    <!-- ... Votre HTML existant ... -->
+
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th>ID</th>
+          <th>Image</th>
+          <th>Produit</th>
+          <th>Description</th>
+          <th>Prix</th>
+          <th>Catégorie</th>
+
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let product of annonces">
+          <tr>
+            <td>{{ product.id }}</td>
+            <td>
+              <img [src]="getFileName(product.photo)" alt="Image du produit" class="img-thumbnail product-image">
+            </td>
+            <td>{{ product.titre }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.prix }}</td>
+            <td>{{ product.nomcateg }}</td>
+
+            <td>
+              <div class="action-icons">
+                <i class="fa fa-trash text-danger" (click)="Delete(product.id)" data-toggle="tooltip" title="Supprimer"></i>
+                <i class="fa fa-edit text-primary" (click)="showEditForm(product)" data-toggle="tooltip" title="Modifier"></i>
+                <i class="fa fa-arrow-up text-success" (click)="BoostProduct(product)" data-toggle="tooltip" title="Booster"></i>
+              </div>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+
+
+<!-- ... Votre HTML existant ... -->
+
+</div>
+
+<!-- Formulaire de modification -->
+
+<div *ngIf="isEditing" class="text-center">
+    <h3>Modifier Produit</h3>
+    <form (ngSubmit)="updateProduct(updateForm)" #updateForm="ngForm" class="form-container mx-auto">
+        <div class="form-group">
+            <label for="editedTitle" style="font-weight: bold; padding-right: 500px;">Titre</label>
+            <input style="background-color: hsl(0, 0%, 86%);" id="editedTitle" [(ngModel)]="editedProduct.titre" name="titre" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="editedDescription" style="font-weight: bold; padding-right: 500px;">Description</label>
+            <textarea id="editedDescription" [(ngModel)]="editedProduct.description" style="background-color: hsl(0, 0%, 86%);" name="description" class="form-control" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="editedPrice" style="font-weight: bold; padding-right: 500px;">Prix</label>
+            <input id="editedPrice" [(ngModel)]="editedProduct.prix" name="prix" type="number" style="background-color: hsl(0, 0%, 86%);" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="editedCategory" style="font-weight: bold; padding-right: 500px;">Catégorie</label>
+            <input id="editedCategory" [(ngModel)]="editedProduct.nomcateg" name="nomcateg" style="background-color: hsl(0, 0%, 86%);" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="editedPhoto" style="font-weight: bold; padding-right: 500px;">l'image</label>
+
+            <input type="file" [(ngModel)]="editedProduct.photo" id="editedPhoto" name="photo" class="form-control-file" accept="image/*" style="background-color: hsl(0, 0%, 88%);" class="form-control" >
+
+        </div>
+
+        <button type="button" class="btn btn-danger" (click)="cancelEdit()">Annuler</button>
+        <button type="submit" class="btn btn-success">Modifier</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<app-footer-user></app-footer-user>

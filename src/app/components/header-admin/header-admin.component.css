@@ -1,0 +1,41 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #151414;
+  color: #fff; /* Couleur du texte dans le header */
+  padding: var(--spacer);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.03);
+  width: 200px; /* Largeur du header */
+  height: 100%; /* Hauteur du header */
+  display: flex;
+  flex-direction: column; /* Alignement vertical */
+  justify-content: flex-start; /* Alignement à gauche */
+  z-index: 1000;
+  width: 200px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column; /* Alignement vertical */
+  gap: var(--spacer); /* Espacement entre les éléments */
+  margin-top: var(--spacer); /* Espacement du haut */
+}
+
+.navbar__menu {
+  display: flex;
+  flex-direction: column; /* Alignement vertical */
+  gap: var(--spacer); /* Espacement entre les éléments */
+}
+
+.navbar__link {
+  display: flex;
+  align-items: center; /* Centrage vertical */
+  color: #fff; /* Couleur du texte des liens */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar__link:hover {
+  color: #f26522; /* Couleur du texte au survol */
+}

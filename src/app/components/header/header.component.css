@@ -1,0 +1,425 @@
+ul,
+li,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a,
+.btn {
+    text-decoration: none !important;
+    outline: none !important;
+    transition: all .3s ease-in-out;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:focus {
+    outline: 0;
+}
+
+.paddind_bottom_0 {
+    padding-bottom: 0 !important;
+}
+
+.btn-custom {
+    margin-top: 20px;
+    background-color: transparent !important;
+    border: 2px solid #ddd;
+    padding: 12px 40px;
+    font-size: 16px;
+}
+
+.lead {
+    font-size: 18px;
+    line-height: 30px;
+    color: #767676;
+    margin: 0;
+    padding: 0;
+}
+
+.form-control:focus {
+    border-color: #ffffff !important;
+    box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
+}
+
+button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.full {
+    float: left;
+    width: 100%;
+}
+
+.layout_padding {
+    padding-top: 90px;
+}
+
+.banner_bg_main {
+    width: 100%;
+    float: left;
+    background-image: url(../../../assets/det-3-2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.header_section_top {
+    width: 100%;
+    float: left;
+    background-color: #2b2a29;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 3% 100%);
+    height: auto;
+    padding: 20px 0px;
+}
+
+.custom_menu {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.custom_menu ul {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+}
+
+.custom_menu li {
+    float: left;
+    font-size: 17px;
+    color: #f1f1f1;
+    padding: 6px 30px 0px 10px;
+}
+
+.custom_menu li a {
+    color: #f1f1f1;
+}
+
+.custom_menu li a:hover {
+    color: #f26522;
+}
+
+.logo {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 30px 0px;
+}
+.header_section {
+    width: 100%;
+    display: flex;
+}
+
+.containt_main {
+    display: flex;
+}
+
+.sidenav a:hover {
+    color: #f26522;
+}
+.dropdown,
+.dropleft,
+.dropright,
+.dropup {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+    margin-left: 30px;
+    order: 2;
+}
+
+.main {
+    flex: 1;
+    margin: 0px 30px;
+    display: inline-block;
+    order: 2;
+}
+a:hover {
+    color: #f26522;
+    text-decoration: underline;
+}
+.banner_taital {
+    width: 100%;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow content */
+  }
+
+  @keyframes bounceInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0; /* Start with opacity 0 */
+    }
+    30% {
+      transform: translateX(0%);
+      opacity: 1; /* Make the block fully visible at 30% */
+    }
+    50% {
+      transform: translateX(15%);
+    }
+    70% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0; /* Hide the block completely at 100% */
+    }
+  }
+
+  .banner_taital {
+    animation: bounceInLeft 7s linear infinite; /* Use bounceInLeft animation for left to right bouncing movement */
+  }
+
+
+
+
+
+
+.dropdown:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+.dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+}
+.dropdown > a {
+    color: #1f1f1f;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    background-color: #f26522;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+.dropdown ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease-in-out;
+}
+.dropdown ul li a:hover {
+    background-color: #e17340b9;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/* Updated Styles for the Card */
+.box_main {
+  width: 100%;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for the Card */
+.box_main:hover {
+  transform: scale(1.05);
+}
+
+.shirt_text {
+  font-size: 20px;
+  color: #343a40;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.price_text {
+  font-size: 16px;
+  color: #f26522;
+  text-align: center;
+  margin: 0;
+}
+
+.electronic_img {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Button styles */
+.btn_main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.seemore_bt button {
+  background-color: #dcc335;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.seemore_bt button:hover {
+  background-color: #c85f23;
+}
+
+
+
+
+
+
+
+        /* Variables */
+        :root {
+          --borderRadius: 10px;
+          --spacer: 1rem;
+          --primary: #C4151C;
+          --text: #fff;
+          --linkHeight: calc(var(--spacer) * 3.5);
+          --timing: 250ms;
+          --transition: var(--timing) ease all;
+          --linkWidth: 10rem;
+        }
+
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+        /* Body */
+        body {
+          background: #000 url(https://unsplash.it/1600/1000/?random);
+          background-size: cover;
+          background-position: center;
+          font-family: 'Open Sans', sans-serif;
+        }
+
+        /* Header */
+        .header {
+          position: sticky;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.9);
+          color: var(--text);
+          padding: 0 var(--spacer * 2);
+          box-shadow: 0 0 40px rgba(0, 0, 0, 0.03);
+          height: 6rem;
+          display: flex;
+          align-items: center;
+          gap: var(--spacer * 3);
+          z-index: 1000;
+        }
+
+        /* Navbar */
+        .navbar {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          margin: 0 auto;
+          overflow: hidden;
+        }
+
+        .navbar__menu {
+          position: relative;
+          display: flex;
+        }
+
+        .navbar__link {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+          align-items: center;
+          justify-content: center;
+          height: var(--linkHeight);
+          width: var(--linkWidth);
+          color: var(--text);
+          transition: var(--transition);
+          text-decoration: none;
+          width: var(--linkWidth);
+          text-transform: uppercase;
+          transition: 500ms ease all;
+        }
+
+        .navbar__link svg {
+          transition: 500ms ease all;
+        }
+
+        .navbar__link:hover svg {
+          stroke: var(--primary);
+        }
+
+
+        .navbar:not(:hover) .navbar__link:focus,
+        .navbar__link:hover {
+          span {
+            opacity: 1;
+            transform: translate(0);
+          }
+        }
+
+        .navbar__item:last-child:before {
+          content: '';
+          position: absolute;
+          left: -8rem;
+          margin-left: calc(var(--linkWidth) / 2);
+          bottom: -1.25rem;
+          height: 0.5rem;
+          width: 2px;
+          background: var(--primary);
+          --speedlineColor: rgba(255, 255, 255, 0.2);
+          --speedGap: 3rem;
+          --shadow: 0 -0.5rem var(--primary), 0 -0.5rem var(--primary), 0 var(--speedGap) 0.5rem var(--primary), 2rem 0 0 var(--speedlineColor), calc(-1 * var(--speedGap)) 0 0 var(--speedlineColor);
+
+
+        }
+        /* Ajoutez ces styles pour personnaliser les liens */
+.navbar__link.home-link {
+  color: #fff; /* Couleur du texte pour Accueil */
+}
+
+.navbar__link.about-link {
+  color: #fff; /* Couleur du texte pour A propos de nous */
+}
+
+.navbar__link.contact-link {
+  color: #fff; /* Couleur du texte pour Contactez-nous */
+}
+
+.navbar__link.login-link {
+  color: #fff; /* Couleur du texte pour Se connecter */
+}
+/* Ajoutez ces styles pour styliser les liens */
+.navbar__link {
+  color: #fff; /* Couleur du texte pour les liens */
+  text-decoration: none; /* Supprimer la décoration de soulignement */
+  padding: 10px 15px; /* Ajouter un peu d'espace autour du texte */
+  transition: color 0.3s ease-in-out; /* Animation de transition de couleur au survol */
+
+  /* Ajoutez d'autres styles selon vos besoins */
+}
+
+.navbar__link:hover {
+  color: #f26522; /* Couleur du texte au survol */
+}
+
+
